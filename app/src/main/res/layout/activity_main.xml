@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:paddingTop="@dimen/_60sdp"
+            android:paddingRight="@dimen/_60sdp"
+            android:paddingLeft="@dimen/_60sdp"
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tvTagLine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="@string/app_tag"
+            android:textColor="@color/grey_90"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/_14ssp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_sw"
+            android:src="@drawable/swwhite"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_name"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="A Product of  Silverwing Technologies Pvt. Ltd."
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/_10ssp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

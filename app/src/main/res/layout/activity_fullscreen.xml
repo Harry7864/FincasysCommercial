@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fullscreen_content"
+    android:background="@color/white"
+    tools:context=".FullscreenActivity">
+
+
+    <WebView
+        android:layout_marginTop="@dimen/_6sdp"
+        android:visibility="gone"
+        android:id="@+id/webview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/recy_error"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textColor="@color/grey_40"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="Connectivity Problem. Check your internet \n Swipe down to refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:textColor="@color/blue_500"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:text="Refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:scaleType="fitEnd"
+            android:src="@drawable/bg_no_item_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="#6e1f75"
+        android:layout_width="1200dp"
+        android:layout_height="@dimen/_10ssp">
+        <ProgressBar
+            android:indeterminateTint="@color/white"
+            android:indeterminateTintMode="src_in"
+            android:id="@+id/pbProcessing"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateOnly="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

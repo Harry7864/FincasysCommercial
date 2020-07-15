@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+    tools:context=".selectsociety.SelectSocietyActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/add_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.SearchView
+            android:focusable="false"
+            android:id="@+id/sv_society"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/white"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search Society"
+            app:searchIcon="@null" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_society_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_continue"
+        android:layout_below="@id/add_bar"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/ps_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_134sdp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_above="@id/btn_continue"
+        android:layout_below="@id/add_bar"
+        android:id="@+id/rel_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="@dimen/_40sdp"
+            android:scaleType="fitCenter"
+            android:id="@+id/iv"
+            android:src="@drawable/search_society_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"/>
+
+        <TextView
+            android:textColor="@color/grey_40"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_12ssp"
+            android:id="@+id/tv_no_data"
+            android:layout_below="@id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Search your society"
+            android:visibility="visible" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/bg_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/bg_no_item_city" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_13sdp"
+        android:background="@drawable/btn_rounded_red"
+        android:enabled="false"
+        android:padding="@dimen/_10sdp"
+        android:text="Continue"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

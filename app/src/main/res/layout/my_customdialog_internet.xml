@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/_36sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:id="@+id/giffy"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/giff" />
+        <TextView
+            android:id="@+id/can_we"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/giffy"
+            android:layout_centerHorizontal="true"
+            android:text="No Connection"
+            android:textColor="#5b3909"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/can_we"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="No internet connection found.check your connection or try again."
+            android:textColor="#5b3909" />
+
+    </RelativeLayout>
+</FrameLayout>
+
